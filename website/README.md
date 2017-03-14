@@ -1,14 +1,10 @@
-# "Cardio" One Page Website Template
+# "202solutions" One Page Website Template
 
-"Cardio" is a one page website template made by [PHIr](http://www.phir.co/) exclusively for Codrops.
+"202solutions" is a one page website template.
 
-[Download on Codrops](http://tympanus.net/codrops/?p=24301)
-
-[Demo](http://tympanus.net/Freebies/Cardio/)
 
 ## License
 
-Use it freely but please do not republish, distribute or sell "as-is". [Read more about our license.](http://tympanus.net/codrops/licensing/)
 
 ## Credits 
 
@@ -46,10 +42,6 @@ Use it freely but please do not republish, distribute or sell "as-is". [Read mor
 
 Other images from [Pixabay](https://pixabay.com/)
 
-## Misc
-
-Follow us: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/)
-
-[© Codrops 2015](http://www.codrops.com)
+[© 202solutions 2017]
 
 
