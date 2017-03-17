@@ -114,7 +114,7 @@ header {
 	width: 100%;
 	color: white;
 	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/header.jpg');
+	background: url('../img/background image.jpg');
 	background-size: cover;
 }
 
@@ -320,7 +320,7 @@ section {
 }
 
 .intro-table-first {
-	background-image: url('../img/table-1.jpg');
+	background-image: url('../img/news.jpg');
 }
 
 .intro-table-hover {
