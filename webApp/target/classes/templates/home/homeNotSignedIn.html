@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{view.index.title.home}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--<link href="../../static/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/css/bootstrap.min.css}"/>-->
+    <!--<link href="../../static/css/core.css" rel="stylesheet" media="screen" th:href="@{/css/core.css}" />-->
+    <!--<script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>-->
+    <!--<script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>-->
+
+    <!-- Favicons (created with http://realfavicongenerator.net/)-->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../static/images/favicons/apple-touch-icon-57x57.png" th:href="@{/images/favicons/apple-touch-icon-57x57.png}">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../static/images/favicons/apple-touch-icon-60x60.png" th:href="@{/images/favicons/apple-touch-icon-60x60.png}">
+    <link rel="icon" type="image/png" href="../../static/images/favicons/favicon-32x32.png" sizes="32x32" th:href="@{/images/favicons/favicon-32x32.png}">
+    <link rel="icon" type="image/png" href="../../static/images/favicons/favicon-16x16.png" sizes="16x16" th:href="@{/images/favicons/favicon-16x16.png}">
+    <link rel="manifest" href="../../static/images/favicons/manifest.json" th:href="@{/images/favicons/manifest.json}">
+    <link rel="shortcut icon" href="../../static/images/favicons/favicon.ico" th:href="@{/images/favicons/favicon.ico}">
+
+    <meta name="msapplication-TileColor" content="#00a8ff">
+
+    <meta name="msapplication-config" content="../../static/images/favicons/browserconfig.xml" th:content="@{/images/favicons/browserconfig.xml}">
+
+    <meta name="theme-color" content="#ffffff">
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" th:href="@{/css/normalize.css}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+    <!-- Owl -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/owl.css" th:href="@{/css/owl.css}">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/animate.css" th:href="@{/css/animate.css}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="../../static/fonts/font-awesome-4.1.0/css/font-awesome.min.css" th:href="@{/fonts/font-awesome-4.1.0/css/font-awesome.min.css}">
+    <!-- Elegant Icons -->
+    <link rel="stylesheet" type="text/css" href="../../static/fonts/eleganticons/et-icons.css" th:href="@{/fonts/eleganticons/et-icons.css}">
+    <!-- Main style -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/cardio.css" th:href="@{/css/cardio.css}">
+
+</head>
+<body>
+<div th:replace="fragments/layout :: header"></div>
+
+    <div class="preloader">
+        <img src="../../static/images/loader.gif" th:src="@{/images/loader.gif}" alt="Preloader image">
+    </div>
+
+    <header id="intro">
+        <div class="container">
+            <div class="table">
+                <div class="header-text">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3 class="light white">Your Delivery Our Priority</h3>
+                            <h1 class="white typed">202 Solutions</h1>
+                            <span class="typed-cursor">|</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="about">
+        <div class="cut cut-top"></div>
+        <div class="container">
+            <div class="row intro-tables">
+                <div class="col-md-4">
+                    <div class="intro-table intro-table-first">
+                        <h5 class="white heading">News</h5>
+                        <div class="owl-carousel owl-schedule bottom">
+                            <div class="item">
+                                <div class="schedule-row row">
+                                    <div class="col-xs-6">
+                                        <h5 class="regular white">Kilborn Pharmacy</h5>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <h5 class="white">Onboard</h5>
+                                    </div>
+                                </div>
+                                <div class="schedule-row row">
+                                    <div class="col-xs-6">
+                                        <h5 class="regular white">Baseline Pharmacy</h5>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <h5 class="white">Onboard</h5>
+                                    </div>
+                                </div>
+                                <div class="schedule-row row">
+                                    <div class="col-xs-6">
+                                        <h5 class="regular white">Alta Bank Pharmacy</h5>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <h5 class="white">Onboard</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+
+                                <div class="schedule-row row">
+                                    <div class="col-xs-6">
+                                        <h5 class="regular white">Official Launch</h5>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <h5 class="white"></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="intro-table intro-table-hover">
+                        <h5 class="white heading hide-hover">Premium Membership</h5>
+                        <div class="bottom">
+                            <h4 class="white heading small-heading no-margin regular">Register Today</h4>
+                            <h4 class="white heading small-pt">20% Discount</h4>
+                            <a href="#" class="btn btn-white-fill expand">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="intro-table intro-table-third">
+                        <h5 class="white heading">Happy Clients</h5>
+                        <div class="owl-testimonials bottom">
+                            <div class="item">
+                                <h4 class="white heading content">I couldn't be more happy with the Service!</h4>
+                                <h5 class="white heading light author">Adam Jordan</h5>
+                            </div>
+                            <div class="item">
+                                <h4 class="white heading content">I can't believe how much I saved!</h4>
+                                <h5 class="white heading light author">Greg Pardon</h5>
+                            </div>
+                            <div class="item">
+                                <h4 class="white heading content">Incredible Service!</h4>
+                                <h5 class="white heading light author">Christina Goldman</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="section section-padded">
+        <div class="container">
+            <div class="row text-center title">
+                <h2>Services</h2>
+                <h4 class="light muted">Broaden your horizonsby streaming yourbusiness, using our unique courier solutions.</h4>
+            </div>
+            <div class="row services">
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="icon-holder">
+                            <img src="../../static/images/icons/heart-blue.png" th:src="@{/images/icons/heart-blue.png}" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">Same Day Delivery</h4>
+                        <p class="description">We Deliver in a wide variety of both urban and remote locations, allowing you to target a wider market for your business growth</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="icon-holder">
+                            <img src="../../static/images/icons/guru-blue.png" th:src="@{/images/icons/guru-blue.png}" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">Online Portal</h4>
+                        <p class="description">Our on-line portal allows to track packages in real time to ensure that your clients are being looked after. It serves as a medium of communication between our client care and your business.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="icon-holder">
+                            <img src="../../static/images/icons/weight-blue.png" th:src="@{/images/icons/weight-blue.png}" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">Power Training</h4>
+                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cut cut-bottom"></div>
+    </section>
+    <section id="team" class="section gray-bg">
+        <div class="container">
+            <div class="row title text-center">
+                <h2 class="margin-top">Team</h2>
+                <h4 class="light muted">We're a dream team!</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team text-center">
+                        <div class="cover" style="background:url('images/team/team-cover1.jpg'); background-size:cover;">
+                            <div class="overlay text-center">
+                                <h3 class="white">$69.00</h3>
+                                <h5 class="light light-white">1 - 5 sessions / month</h5>
+                            </div>
+                        </div>
+                        <img src="../../static/images/team/team3.jpg" th:src="@{/images/team/team3.jpg}" alt="Team Image" class="avatar">
+                        <div class="title">
+                            <h4>Ben Adamson</h4>
+                            <h5 class="muted regular">Fitness Instructor</h5>
+                        </div>
+                        <button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team text-center">
+                        <div class="cover" style="background:url('images/team/team-cover2.jpg'); background-size:cover;">
+                            <div class="overlay text-center">
+                                <h3 class="white">$69.00</h3>
+                                <h5 class="light light-white">1 - 5 sessions / month</h5>
+                            </div>
+                        </div>
+                        <img src="../../static/images/team/team1.jpg" th:src="@{/images/icons/guru-blue.png}" alt="Team Image" class="avatar">
+                        <div class="title">
+                            <h4>Eva Williams</h4>
+                            <h5 class="muted regular">Personal Trainer</h5>
+                        </div>
+                        <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team text-center">
+                        <div class="cover" style="background:url('images/team/team-cover3.jpg'); background-size:cover;">
+                            <div class="overlay text-center">
+                                <h3 class="white">$69.00</h3>
+                                <h5 class="light light-white">1 - 5 sessions / month</h5>
+                            </div>
+                        </div>
+                        <img src="../../static/images/team/team2.jpg" th:src="@{/images/team/team2.jpg}" alt="Team Image" class="avatar">
+                        <div class="title">
+                            <h4>John Phillips</h4>
+                            <h5 class="muted regular">Personal Trainer</h5>
+                        </div>
+                        <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="row title text-center">
+                <h2 class="margin-top white">Pricing</h2>
+                <h4 class="light white">Choose your favorite pricing plan and sign up today!</h4>
+            </div>
+            <div class="row no-margin">
+                <div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
+                    <div class="pricing">
+                        <div class="box-main active" data-img="images/pricing1.jpg">
+                            <h4 class="white">Yoga Pilates</h4>
+                            <h4 class="white regular light">$850.00 <span class="small-font">/ year</span></h4>
+                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
+                            <i class="info-icon icon_question"></i>
+                        </div>
+                        <div class="box-second active">
+                            <ul class="white-list text-left">
+                                <li>One Personal Trainer</li>
+                                <li>Big gym space for training</li>
+                                <li>Free tools &amp; props</li>
+                                <li>Free locker</li>
+                                <li>Free before / after shower</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pricing">
+                        <div class="box-main" data-img="images/pricing2.jpg">
+                            <h4 class="white">Cardio Training</h4>
+                            <h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>
+                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
+                            <i class="info-icon icon_question"></i>
+                        </div>
+                        <div class="box-second">
+                            <ul class="white-list text-left">
+                                <li>One Personal Trainer</li>
+                                <li>Big gym space for training</li>
+                                <li>Free tools &amp; props</li>
+                                <li>Free locker</li>
+                                <li>Free before / after shower</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-padded blue-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="owl-twitter owl-carousel">
+                        <div class="item text-center">
+                            <i class="icon fa fa-twitter"></i>
+                            <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
+                            <h4 class="light-white light">#health #training #exercise</h4>
+                        </div>
+                        <div class="item text-center">
+                            <i class="icon fa fa-twitter"></i>
+                            <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
+                            <h4 class="light-white light">#health #training #exercise</h4>
+                        </div>
+                        <div class="item text-center">
+                            <i class="icon fa fa-twitter"></i>
+                            <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
+                            <h4 class="light-white light">#health #training #exercise</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-popup">
+                <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+                <h3 class="white">Sign Up</h3>
+                <form action="" class="popup-form">
+                    <input type="text" class="form-control form-white" placeholder="Full Name">
+                    <input type="text" class="form-control form-white" placeholder="Email Address">
+                    <div class="dropdown">
+                        <button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pricing Plan
+                        </button>
+                        <ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
+                            <li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
+                            <li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
+                            <li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
+                            <li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
+                        </ul>
+                    </div>
+                    <div class="checkbox-holder text-left">
+                        <div class="checkbox">
+                            <input type="checkbox" value="None" id="squaredOne" name="check" />
+                            <label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center-mobile">
+                    <h3 class="white">Reserve a Free Trial Class!</h3>
+                    <h5 class="light regular light-white">Shape your body and improve your health.</h5>
+                    <a href="#" class="btn btn-blue ripple trial-button">Start Free Trial</a>
+                </div>
+                <div class="col-sm-6 text-center-mobile">
+                    <h3 class="white">Opening Hours <span class="open-blink"></span></h3>
+                    <div class="row opening-hours">
+                        <div class="col-sm-6 text-center-mobile">
+                            <h5 class="light-white light">Mon - Fri</h5>
+                            <h3 class="regular white">9:00 - 22:00</h3>
+                        </div>
+                        <div class="col-sm-6 text-center-mobile">
+                            <h5 class="light-white light">Sat - Sun</h5>
+                            <h3 class="regular white">10:00 - 18:00</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-footer text-center-mobile">
+                <div class="col-sm-8">
+                    <p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
+                </div>
+                <div class="col-sm-4 text-right text-center-mobile">
+                    <ul class="social-footer">
+                        <li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Holder for mobile navigation -->
+    <div class="mobile-nav">
+        <ul>
+        </ul>
+        <a href="#" class="close-link"><i class="arrow_up"></i></a>
+    </div>
+    <!-- Scripts -->
+    <script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <script src="../../static/js/owl.carousel.min.js" th:src="@{/js/owl.carousel.min.js}"></script>
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+    <script src="../../static/js/wow.min.js" th:src="@{/js/wow.min.js}"></script>
+    <script src="../../static/js/typewriter.js" th:src="@{/js/typewriter.js}"></script>
+    <script src="../../static/js/jquery.onepagenav.js" th:src="@{/js/jquery.onepagenav.js}"></script>
+    <script src="../../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <div th:replace="fragments/layout :: footer">&copy; 2016 The Static Templates</div>
+
+<script th:inline="javascript" type="text/javascript">
+    /* Fill in modal with content loaded with Ajax */
+    $(document).ready(function () {
+        $('#signup').on('click', function () {
+            $("#signup-modal").modal();
+            $("#signup-modal-body").text("");
+            $.ajax({
+                url: "signup",
+                cache: false
+            }).done(function (html) {
+                $("#signup-modal-body").append(html);
+            });
+        })
+    });
+</script>
+<!-- Signup modal -->
+<div th:replace="fragments/components :: modal(id='signup-modal', title='Signup')"></div>
+</body>
+</html>

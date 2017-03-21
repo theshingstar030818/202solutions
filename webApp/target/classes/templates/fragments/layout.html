@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/css/bootstrap.min.css}"/>
+
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar" th:fragment="header">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../../static/images/logo.png" th:src="@{/images/logo.png}" data-active-url="images/logo-active.png" alt=""></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right main-nav">
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#team">Team</a></li>
+                <li><a href="#pricing">Contact Us</a></li>
+                <li><a href="#pricing">Patient Drop Box</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!--<div class="navbar navbar-inverse navbar-fixed-top" th:fragment="header">-->
+    <!--<div class="container">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#" th:text="#{app.name}"></a>-->
+        <!--</div>-->
+        <!--<div class="navbar-collapse collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li th:classappend="${module == 'home' ? 'active' : ''}">-->
+                    <!--<a href="#home" th:href="@{/home}">Home</a>-->
+                <!--</li>-->
+                <!--<li th:classappend="${module == 'about' ? 'active' : ''}">-->
+                    <!--<a href="#about" th:href="@{/about}">About</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li >-->
+                    <!--<a href="/signin" th:href="@{/signin}">-->
+                        <!--<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in-->
+                    <!--</a>-->
+                <!--</li>-->
+
+                <!--<li th:if="${currentUser} != null" th:classappend="${module == 'account' ? 'active' : ''}">-->
+                    <!--<a th:href="@{/account/}+${currentUser.getId()}" th:text ="${currentUser.getName()}"></a>-->
+                <!--</li>-->
+
+                <!--<li >-->
+                    <!--<a href="/logout" th:href="@{#}" onclick="$('#form').submit();">-->
+                        <!--<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout-->
+                    <!--</a>-->
+                    <!--<form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+    <!--</div>-->
+<!--</div>-->
+
+<!-- Footer -->
+<div th:fragment="footer" th:align="center">
+    &copy;&nbsp;<span th:text="${#temporals.format(#temporals.createNow(), 'yyyy')}"></span>
+    Social Media Wiki <span th:text="#{app.version}"></span>
+</div>
+
+</body>
+</html>
