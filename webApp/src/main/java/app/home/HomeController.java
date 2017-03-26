@@ -1,9 +1,12 @@
 package app.home;
 
 import app.parse.ParseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import parse4j.Parse;
+import parse4j.ParseUser;
 
 import java.security.Principal;
 import java.util.LinkedHashMap;
@@ -21,13 +24,8 @@ public class HomeController {
     }
 
     @RequestMapping({"/","/home"})
-    String index(Principal principal) {
-
-        ParseService parseService = new ParseService();
-
-        if(principal != null){
-            Map<String, String> map = new LinkedHashMap<>();
-            map.put("name", principal.getName());
+    String index() {
+        if(ParseUser.currentUser != null){
             return "home/homeSignedIn";
         }else{
             return "home/homeNotSignedIn";

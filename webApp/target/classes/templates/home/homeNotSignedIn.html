@@ -3,10 +3,10 @@
 <head>
     <title th:text="#{view.index.title.home}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!--<link href="../../static/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/css/bootstrap.min.css}"/>-->
-    <!--<link href="../../static/css/core.css" rel="stylesheet" media="screen" th:href="@{/css/core.css}" />-->
-    <!--<script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>-->
-    <!--<script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>-->
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/css/bootstrap.min.css}"/>
+
+    <script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 
     <!-- Favicons (created with http://realfavicongenerator.net/)-->
     <link rel="apple-touch-icon" sizes="57x57" href="../../static/images/favicons/apple-touch-icon-57x57.png" th:href="@{/images/favicons/apple-touch-icon-57x57.png}">
@@ -38,7 +38,7 @@
 
 </head>
 <body>
-<div th:replace="fragments/layout :: header"></div>
+<div th:replace="fragments/layout :: header_fancy"></div>
 
     <div class="preloader">
         <img src="../../static/images/loader.gif" th:src="@{/images/loader.gif}" alt="Preloader image">
@@ -50,8 +50,8 @@
                 <div class="header-text">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h3 class="light white">Your Delivery Our Priority</h3>
-                            <h1 class="white typed">202 Solutions</h1>
+                            <h3 class="light white">202 Solutions</h3>
+                            <h1 class="white typed"> Your Delivery Our Priority</h1>
                             <span class="typed-cursor">|</span>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
                             <h4>Ben Adamson</h4>
                             <h5 class="muted regular">Fitness Instructor</h5>
                         </div>
-                        <button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
+                        <button id="signup" class="btn btn-blue-fill">Sign Up Now</button>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -214,7 +214,7 @@
                             <h4>Eva Williams</h4>
                             <h5 class="muted regular">Personal Trainer</h5>
                         </div>
-                        <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+                        <a href="#" id="signup" class="btn btn-blue-fill ripple">Sign Up Now</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -230,7 +230,7 @@
                             <h4>John Phillips</h4>
                             <h5 class="muted regular">Personal Trainer</h5>
                         </div>
-                        <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+                        <a href="#" id="signup" class="btn btn-blue-fill ripple">Sign Up Now</a>
                     </div>
                 </div>
             </div>
@@ -248,7 +248,7 @@
                         <div class="box-main active" data-img="images/pricing1.jpg">
                             <h4 class="white">Yoga Pilates</h4>
                             <h4 class="white regular light">$850.00 <span class="small-font">/ year</span></h4>
-                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
+                            <a href="#" id="signup" class="btn btn-white-fill">Sign Up Now</a>
                             <i class="info-icon icon_question"></i>
                         </div>
                         <div class="box-second active">
@@ -265,7 +265,7 @@
                         <div class="box-main" data-img="images/pricing2.jpg">
                             <h4 class="white">Cardio Training</h4>
                             <h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>
-                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
+                            <a href="#" id="signup" class="btn btn-white-fill">Sign Up Now</a>
                             <i class="info-icon icon_question"></i>
                         </div>
                         <div class="box-second">
