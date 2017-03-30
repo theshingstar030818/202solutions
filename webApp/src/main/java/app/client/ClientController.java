@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import parse4j.ParseUser;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * Created by tanzeelrana on 3/25/2017.
  */
@@ -24,9 +26,10 @@ public class ClientController {
     }
 
     @RequestMapping({"/clients"})
-    String index(RedirectAttributes ra, Model model) {
-        if(ParseUser.currentUser != null){
-            model.addAttribute("clients", parseService.getAllClients());
+    String index(RedirectAttributes ra, Model model, HttpSession session) {
+
+        if(parseService.isAuthenticated(session.getAttribute("currentUser"))){
+            model.addAttribute("clients", parseService.getAllClients( (ParseUser) session.getAttribute("currentUser")));
             return "/clients/clients";
         }else{
             ra.addAttribute("error","1");

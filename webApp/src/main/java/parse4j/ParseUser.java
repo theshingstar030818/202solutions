@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 
 @ParseClassName("users")
 public class ParseUser extends ParseObject {
-	
+
 	public static ParseUser currentUser;
-	
+
 	private static Logger LOGGER = LoggerFactory.getLogger(ParseUser.class);
 
 	private static String password;
@@ -33,7 +33,7 @@ public class ParseUser extends ParseObject {
 
 		remove(key);
 	}
-	
+
 	public void setSessionToken(String sessionToken) {
 		this.sessionToken = sessionToken;
 	}
@@ -61,7 +61,6 @@ public class ParseUser extends ParseObject {
 
 	public String getSessionToken() {
 		return sessionToken;
-
 	}
 
 	public static ParseUser logIn(String username, String password) throws ParseException {
@@ -70,11 +69,11 @@ public class ParseUser extends ParseObject {
 		pu.setPassword(password);
 		return pu;
 	}
-	
+
 	public static boolean isAuthenticated() {
 		return (sessionToken != null && getObjectId() != null);
 	}
-	
+
 	void validateSave() {
 
 		if (getObjectId() == null) {
@@ -90,9 +89,9 @@ public class ParseUser extends ParseObject {
 		}
 
 	}
-	
-	
-	
+
+
+
 	public void signUp() throws ParseException {
 
 		if ((getUsername() == null) || (getUsername().length() == 0)) {
@@ -106,13 +105,13 @@ public class ParseUser extends ParseObject {
 			throw new IllegalArgumentException(
 					"Password cannot be missing or blank");
 		}
-		
+
 		if (getObjectId() != null) {
 			LOGGER.error("Cannot sign up a user that has already signed up.");
 			throw new IllegalArgumentException(
 					"Cannot sign up a user that has already signed up.");
 		}
-		
+
 		ParsePostCommand command = new ParsePostCommand(getClassName());
 		JSONObject parseData = getParseData();
 		parseData.put("password", password);
@@ -142,11 +141,11 @@ public class ParseUser extends ParseObject {
 			LOGGER.error("Request failed.");
 			throw response.getException();
 		}
-		
+
 	}
-	
+
 	public static ParseUser login(String username, String password) throws ParseException {
-		
+
 		currentUser = null;
 		ParseGetCommand command = new ParseGetCommand("login");
 		command.addJson(false);
@@ -174,7 +173,7 @@ public class ParseUser extends ParseObject {
 				jsonResponse.remove(ParseConstants.FIELD_SESSION_TOKEN);
 				parseUser.setData(jsonResponse, false);
 				return parseUser;
-				
+
 			}catch (JSONException e) {
 				LOGGER.error("Although Parse reports object successfully saved, the response was invalid.");
 				throw new ParseException(
@@ -187,9 +186,9 @@ public class ParseUser extends ParseObject {
 			LOGGER.error("Request failed.");
 			throw response.getException();
 		}
-		
+
 	}
-	
+
 	public static void requestPasswordReset(String email) throws ParseException {
 
 		ParsePostCommand command = new ParsePostCommand("requestPasswordReset");
@@ -237,19 +236,21 @@ public class ParseUser extends ParseObject {
 			currentUser = null;
 		}
 	}
-	
+
 	public static void requestPasswordResetInBackground(String email,
 			RequestPasswordResetCallback callback) {
 
 	}
-	
+
 	public void signUpInBackground(SignUpCallback callback) {
 
 	}
-	
-	public static void loginInBackground(String username, String password, 
-			LoginCallback callback) {
 
+	public static void loginInBackground(String username, String password,
+			LoginCallback callback) {
 	}
-	
+
+	public void setCurrent(ParseUser currentUser){
+		this.currentUser = currentUser;
+	}
 }
